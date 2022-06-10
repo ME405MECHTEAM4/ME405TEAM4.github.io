@@ -30,7 +30,7 @@ var NAVTREE =
       [ "Files for Term Project", "405_t_p_page.html#section1", null ],
       [ "Hand Calculations", "405_t_p_page.html#section2", null ],
       [ "Finite State Machine Diagrams", "405_t_p_page.html#section3", null ],
-      [ "ask Diagrams", "405_t_p_page.html#section4", null ],
+      [ "Task Diagrams", "405_t_p_page.html#section4", null ],
       [ "Oscilliscope Images", "405_t_p_page.html#section5", null ],
       [ "Plots", "405_t_p_page.html#section6", null ],
       [ "Cad Models", "405_t_p_page.html#section7", null ],
