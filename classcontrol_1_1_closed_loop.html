@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -24,6 +33,21 @@
    <div id="projectname">ME405TermProject
    </div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -35,17 +59,23 @@
 var searchBox = new SearchBox("searchBox", "search",'Search','.html');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
+$(document).ready(function(){initNavTree('classcontrol_1_1_closed_loop.html',''); initResizable(); });
 /* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +90,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>control</b></li><li class="navelem"><a class="el" href="classcontrol_1_1_closed_loop.html">ClosedLoop</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -95,49 +120,38 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ad8720c5de517079a71c1a9e4794323b2"><td class="memItemLeft" align="right" valign="top"><a id="ad8720c5de517079a71c1a9e4794323b2" name="ad8720c5de517079a71c1a9e4794323b2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>t0</b></td></tr>
-<tr class="memdesc:ad8720c5de517079a71c1a9e4794323b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initial time. <br /></td></tr>
+<tr class="memitem:ad8720c5de517079a71c1a9e4794323b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcontrol_1_1_closed_loop.html#ad8720c5de517079a71c1a9e4794323b2">t0</a></td></tr>
+<tr class="memdesc:ad8720c5de517079a71c1a9e4794323b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initial time.  <a href="classcontrol_1_1_closed_loop.html#ad8720c5de517079a71c1a9e4794323b2">More...</a><br /></td></tr>
 <tr class="separator:ad8720c5de517079a71c1a9e4794323b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0cf4ef3d75f870ea897d87bb17c6f04"><td class="memItemLeft" align="right" valign="top"><a id="ae0cf4ef3d75f870ea897d87bb17c6f04" name="ae0cf4ef3d75f870ea897d87bb17c6f04"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>saturation_low</b></td></tr>
-<tr class="memdesc:ae0cf4ef3d75f870ea897d87bb17c6f04"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates class variable for lowest acutation value <br /></td></tr>
+<tr class="memitem:ae0cf4ef3d75f870ea897d87bb17c6f04"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcontrol_1_1_closed_loop.html#ae0cf4ef3d75f870ea897d87bb17c6f04">saturation_low</a></td></tr>
+<tr class="memdesc:ae0cf4ef3d75f870ea897d87bb17c6f04"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates class variable for lowest acutation value  <a href="classcontrol_1_1_closed_loop.html#ae0cf4ef3d75f870ea897d87bb17c6f04">More...</a><br /></td></tr>
 <tr class="separator:ae0cf4ef3d75f870ea897d87bb17c6f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ead9d48dea5938d2adeda1004cc2b07"><td class="memItemLeft" align="right" valign="top"><a id="a1ead9d48dea5938d2adeda1004cc2b07" name="a1ead9d48dea5938d2adeda1004cc2b07"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>saturation_high</b></td></tr>
-<tr class="memdesc:a1ead9d48dea5938d2adeda1004cc2b07"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates class variable for highest acutation value <br /></td></tr>
+<tr class="memitem:a1ead9d48dea5938d2adeda1004cc2b07"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcontrol_1_1_closed_loop.html#a1ead9d48dea5938d2adeda1004cc2b07">saturation_high</a></td></tr>
+<tr class="memdesc:a1ead9d48dea5938d2adeda1004cc2b07"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates class variable for highest acutation value  <a href="classcontrol_1_1_closed_loop.html#a1ead9d48dea5938d2adeda1004cc2b07">More...</a><br /></td></tr>
 <tr class="separator:a1ead9d48dea5938d2adeda1004cc2b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab31f08783683b727ed1f23561cf4fb58"><td class="memItemLeft" align="right" valign="top"><a id="ab31f08783683b727ed1f23561cf4fb58" name="ab31f08783683b727ed1f23561cf4fb58"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Kp</b></td></tr>
-<tr class="memdesc:ab31f08783683b727ed1f23561cf4fb58"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates class variable for proportional gain <br /></td></tr>
+<tr class="memitem:ab31f08783683b727ed1f23561cf4fb58"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcontrol_1_1_closed_loop.html#ab31f08783683b727ed1f23561cf4fb58">Kp</a></td></tr>
+<tr class="memdesc:ab31f08783683b727ed1f23561cf4fb58"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates class variable for proportional gain  <a href="classcontrol_1_1_closed_loop.html#ab31f08783683b727ed1f23561cf4fb58">More...</a><br /></td></tr>
 <tr class="separator:ab31f08783683b727ed1f23561cf4fb58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82361ad372f71d7df117c87bb12a5cdb"><td class="memItemLeft" align="right" valign="top"><a id="a82361ad372f71d7df117c87bb12a5cdb" name="a82361ad372f71d7df117c87bb12a5cdb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>reference</b></td></tr>
-<tr class="memdesc:a82361ad372f71d7df117c87bb12a5cdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates class variable for reference value <br /></td></tr>
+<tr class="memitem:a82361ad372f71d7df117c87bb12a5cdb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcontrol_1_1_closed_loop.html#a82361ad372f71d7df117c87bb12a5cdb">reference</a></td></tr>
+<tr class="memdesc:a82361ad372f71d7df117c87bb12a5cdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates class variable for reference value  <a href="classcontrol_1_1_closed_loop.html#a82361ad372f71d7df117c87bb12a5cdb">More...</a><br /></td></tr>
 <tr class="separator:a82361ad372f71d7df117c87bb12a5cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58798d13233ae6c3dcb875ed303d0c5b"><td class="memItemLeft" align="right" valign="top"><a id="a58798d13233ae6c3dcb875ed303d0c5b" name="a58798d13233ae6c3dcb875ed303d0c5b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>actuation</b></td></tr>
-<tr class="memdesc:a58798d13233ae6c3dcb875ed303d0c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates class variable for actuation <br /></td></tr>
+<tr class="memitem:a58798d13233ae6c3dcb875ed303d0c5b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcontrol_1_1_closed_loop.html#a58798d13233ae6c3dcb875ed303d0c5b">actuation</a></td></tr>
+<tr class="memdesc:a58798d13233ae6c3dcb875ed303d0c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates class variable for actuation  <a href="classcontrol_1_1_closed_loop.html#a58798d13233ae6c3dcb875ed303d0c5b">More...</a><br /></td></tr>
 <tr class="separator:a58798d13233ae6c3dcb875ed303d0c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3e3670bb7a252a75906e5d291fcfacc"><td class="memItemLeft" align="right" valign="top"><a id="ab3e3670bb7a252a75906e5d291fcfacc" name="ab3e3670bb7a252a75906e5d291fcfacc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>dead_zone_low</b></td></tr>
-<tr class="memdesc:ab3e3670bb7a252a75906e5d291fcfacc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Low dead zone attribute. <br /></td></tr>
+<tr class="memitem:ab3e3670bb7a252a75906e5d291fcfacc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcontrol_1_1_closed_loop.html#ab3e3670bb7a252a75906e5d291fcfacc">dead_zone_low</a></td></tr>
+<tr class="memdesc:ab3e3670bb7a252a75906e5d291fcfacc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Low dead zone attribute.  <a href="classcontrol_1_1_closed_loop.html#ab3e3670bb7a252a75906e5d291fcfacc">More...</a><br /></td></tr>
 <tr class="separator:ab3e3670bb7a252a75906e5d291fcfacc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ef41d95ea889afae7041c0c708c8dfc"><td class="memItemLeft" align="right" valign="top"><a id="a6ef41d95ea889afae7041c0c708c8dfc" name="a6ef41d95ea889afae7041c0c708c8dfc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>dead_zone_high</b></td></tr>
-<tr class="memdesc:a6ef41d95ea889afae7041c0c708c8dfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">High dead zone attribute. <br /></td></tr>
+<tr class="memitem:a6ef41d95ea889afae7041c0c708c8dfc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcontrol_1_1_closed_loop.html#a6ef41d95ea889afae7041c0c708c8dfc">dead_zone_high</a></td></tr>
+<tr class="memdesc:a6ef41d95ea889afae7041c0c708c8dfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">High dead zone attribute.  <a href="classcontrol_1_1_closed_loop.html#a6ef41d95ea889afae7041c0c708c8dfc">More...</a><br /></td></tr>
 <tr class="separator:a6ef41d95ea889afae7041c0c708c8dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa043c1f85d901b137f927d06a6e4803d"><td class="memItemLeft" align="right" valign="top"><a id="aa043c1f85d901b137f927d06a6e4803d" name="aa043c1f85d901b137f927d06a6e4803d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>tArray</b></td></tr>
-<tr class="memdesc:aa043c1f85d901b137f927d06a6e4803d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time array attribute for plotting. <br /></td></tr>
+<tr class="memitem:aa043c1f85d901b137f927d06a6e4803d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcontrol_1_1_closed_loop.html#aa043c1f85d901b137f927d06a6e4803d">tArray</a></td></tr>
+<tr class="memdesc:aa043c1f85d901b137f927d06a6e4803d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time array attribute for plotting.  <a href="classcontrol_1_1_closed_loop.html#aa043c1f85d901b137f927d06a6e4803d">More...</a><br /></td></tr>
 <tr class="separator:aa043c1f85d901b137f927d06a6e4803d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a17c1c1bffdafc197892c9c0e2dd756"><td class="memItemLeft" align="right" valign="top"><a id="a1a17c1c1bffdafc197892c9c0e2dd756" name="a1a17c1c1bffdafc197892c9c0e2dd756"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>pArray</b></td></tr>
-<tr class="memdesc:a1a17c1c1bffdafc197892c9c0e2dd756"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position array attribute for plotting. <br /></td></tr>
+<tr class="memitem:a1a17c1c1bffdafc197892c9c0e2dd756"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcontrol_1_1_closed_loop.html#a1a17c1c1bffdafc197892c9c0e2dd756">pArray</a></td></tr>
+<tr class="memdesc:a1a17c1c1bffdafc197892c9c0e2dd756"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position array attribute for plotting.  <a href="classcontrol_1_1_closed_loop.html#a1a17c1c1bffdafc197892c9c0e2dd756">More...</a><br /></td></tr>
 <tr class="separator:a1a17c1c1bffdafc197892c9c0e2dd756"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a208751f4f01f019da9278685fb0ddc4d"><td class="memItemLeft" align="right" valign="top"><a id="a208751f4f01f019da9278685fb0ddc4d" name="a208751f4f01f019da9278685fb0ddc4d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Error</b></td></tr>
-<tr class="memdesc:a208751f4f01f019da9278685fb0ddc4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error array of last 10 values. <br /></td></tr>
+<tr class="memitem:a208751f4f01f019da9278685fb0ddc4d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcontrol_1_1_closed_loop.html#a208751f4f01f019da9278685fb0ddc4d">Error</a></td></tr>
+<tr class="memdesc:a208751f4f01f019da9278685fb0ddc4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error array of last 10 values.  <a href="classcontrol_1_1_closed_loop.html#a208751f4f01f019da9278685fb0ddc4d">More...</a><br /></td></tr>
 <tr class="separator:a208751f4f01f019da9278685fb0ddc4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -371,13 +385,191 @@ Public Attributes</h2></td></tr>
 </pre> 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>control.py</li>
-</ul>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a58798d13233ae6c3dcb875ed303d0c5b" name="a58798d13233ae6c3dcb875ed303d0c5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58798d13233ae6c3dcb875ed303d0c5b">&#9670;&nbsp;</a></span>actuation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">control.ClosedLoop.actuation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>creates class variable for actuation </p>
+
+</div>
+</div>
+<a id="a6ef41d95ea889afae7041c0c708c8dfc" name="a6ef41d95ea889afae7041c0c708c8dfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ef41d95ea889afae7041c0c708c8dfc">&#9670;&nbsp;</a></span>dead_zone_high</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">control.ClosedLoop.dead_zone_high</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>High dead zone attribute. </p>
+
+</div>
+</div>
+<a id="ab3e3670bb7a252a75906e5d291fcfacc" name="ab3e3670bb7a252a75906e5d291fcfacc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3e3670bb7a252a75906e5d291fcfacc">&#9670;&nbsp;</a></span>dead_zone_low</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">control.ClosedLoop.dead_zone_low</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Low dead zone attribute. </p>
+
+</div>
+</div>
+<a id="a208751f4f01f019da9278685fb0ddc4d" name="a208751f4f01f019da9278685fb0ddc4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a208751f4f01f019da9278685fb0ddc4d">&#9670;&nbsp;</a></span>Error</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">control.ClosedLoop.Error</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Error array of last 10 values. </p>
+
+</div>
+</div>
+<a id="ab31f08783683b727ed1f23561cf4fb58" name="ab31f08783683b727ed1f23561cf4fb58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab31f08783683b727ed1f23561cf4fb58">&#9670;&nbsp;</a></span>Kp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">control.ClosedLoop.Kp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>creates class variable for proportional gain </p>
+
+</div>
+</div>
+<a id="a1a17c1c1bffdafc197892c9c0e2dd756" name="a1a17c1c1bffdafc197892c9c0e2dd756"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a17c1c1bffdafc197892c9c0e2dd756">&#9670;&nbsp;</a></span>pArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">control.ClosedLoop.pArray</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Position array attribute for plotting. </p>
+
+</div>
+</div>
+<a id="a82361ad372f71d7df117c87bb12a5cdb" name="a82361ad372f71d7df117c87bb12a5cdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82361ad372f71d7df117c87bb12a5cdb">&#9670;&nbsp;</a></span>reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">control.ClosedLoop.reference</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>creates class variable for reference value </p>
+
+</div>
+</div>
+<a id="a1ead9d48dea5938d2adeda1004cc2b07" name="a1ead9d48dea5938d2adeda1004cc2b07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ead9d48dea5938d2adeda1004cc2b07">&#9670;&nbsp;</a></span>saturation_high</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">control.ClosedLoop.saturation_high</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>creates class variable for highest acutation value </p>
+
+</div>
+</div>
+<a id="ae0cf4ef3d75f870ea897d87bb17c6f04" name="ae0cf4ef3d75f870ea897d87bb17c6f04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0cf4ef3d75f870ea897d87bb17c6f04">&#9670;&nbsp;</a></span>saturation_low</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">control.ClosedLoop.saturation_low</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>creates class variable for lowest acutation value </p>
+
+</div>
+</div>
+<a id="ad8720c5de517079a71c1a9e4794323b2" name="ad8720c5de517079a71c1a9e4794323b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8720c5de517079a71c1a9e4794323b2">&#9670;&nbsp;</a></span>t0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">control.ClosedLoop.t0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initial time. </p>
+
+</div>
+</div>
+<a id="aa043c1f85d901b137f927d06a6e4803d" name="aa043c1f85d901b137f927d06a6e4803d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa043c1f85d901b137f927d06a6e4803d">&#9670;&nbsp;</a></span>tArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">control.ClosedLoop.tArray</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Time array attribute for plotting. </p>
+
+</div>
+</div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecontrol.html">control</a></li><li class="navelem"><a class="el" href="classcontrol_1_1_closed_loop.html">ClosedLoop</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
 </body>
 </html>

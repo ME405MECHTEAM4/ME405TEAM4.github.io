@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -24,6 +33,21 @@
    <div id="projectname">ME405TermProject
    </div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -35,18 +59,23 @@
 var searchBox = new SearchBox("searchBox", "search",'Search','.html');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
+$(document).ready(function(){initNavTree('functions_vars.html',''); initResizable(); });
 /* @license-end */
 </script>
-<div id="main-nav"></div>
-</div><!-- top -->
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -65,47 +94,34 @@ $(function() {
 &#160;
 
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
-<li>actuation&#160;:&#160;<a class="el" href="classcontrol_1_1_closed_loop.html#a58798d13233ae6c3dcb875ed303d0c5b">control.ClosedLoop</a></li>
+<li>Amax_ad&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#ac052a4b0fc37f85dc5b07df8c0289b70">Stepper.TMC4210</a></li>
+<li>Amax_r3&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#aa7053a939680b7fc9a03af2decede7af">Stepper.TMC4210</a></li>
 </ul>
 
 
 <h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
 <li>ch1&#160;:&#160;<a class="el" href="classmotor_1_1_motor_driver.html#ab59ff180f9593d716a60d0177cd8564e">motor.MotorDriver</a></li>
 <li>ch2&#160;:&#160;<a class="el" href="classmotor_1_1_motor_driver.html#af47581f527f4163d62810c617e081001">motor.MotorDriver</a></li>
-</ul>
-
-
-<h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
-<li>dead_zone_high&#160;:&#160;<a class="el" href="classcontrol_1_1_closed_loop.html#a6ef41d95ea889afae7041c0c708c8dfc">control.ClosedLoop</a></li>
-<li>dead_zone_low&#160;:&#160;<a class="el" href="classcontrol_1_1_closed_loop.html#ab3e3670bb7a252a75906e5d291fcfacc">control.ClosedLoop</a></li>
-<li>delta&#160;:&#160;<a class="el" href="classencoder_1_1_encoder_driver.html#a99e9351c942f7909677e28d8bef15679">encoder.EncoderDriver</a></li>
+<li>config1&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a29c38cdce79432b783b256fe5c1f8a50">Stepper.TMC4210</a></li>
+<li>config2&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a94fd12e3a3a219d7cb1d2c1d947983da">Stepper.TMC4210</a></li>
 </ul>
 
 
 <h3><a id="index_e" name="index_e"></a>- e -</h3><ul>
-<li>Encoder_Ratio&#160;:&#160;<a class="el" href="classchasy_1_1chassis.html#a6ca346c0be4559345b6aa3b5027eec2c">chasy.chassis</a></li>
-<li>Error&#160;:&#160;<a class="el" href="classcontrol_1_1_closed_loop.html#a208751f4f01f019da9278685fb0ddc4d">control.ClosedLoop</a></li>
+<li>EN&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a26960cf569ebd52bc8e737332cf456e5">Stepper.TMC4210</a></li>
+<li>En&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#aa4fbb4b0cf177e57396a69e02b4b721d">Stepper.TMC4210</a></li>
 </ul>
 
 
 <h3><a id="index_g" name="index_g"></a>- g -</h3><ul>
-<li>Gear_Ratio&#160;:&#160;<a class="el" href="classchasy_1_1chassis.html#a6a01989bd0bbdd956eb56fc8d230ffaa">chasy.chassis</a></li>
 <li>go_flag&#160;:&#160;<a class="el" href="classcotask_1_1_task.html#a96733bb9f4349a3f284083d1d4e64f9f">cotask.Task</a></li>
-</ul>
-
-
-<h3><a id="index_k" name="index_k"></a>- k -</h3><ul>
-<li>Kp&#160;:&#160;<a class="el" href="classcontrol_1_1_closed_loop.html#ab31f08783683b727ed1f23561cf4fb58">control.ClosedLoop</a></li>
-</ul>
-
-
-<h3><a id="index_l" name="index_l"></a>- l -</h3><ul>
-<li>left&#160;:&#160;<a class="el" href="classchasy_1_1chassis.html#a6f5d953d504de5b254e9921ecb689a82">chasy.chassis</a></li>
 </ul>
 
 
 <h3><a id="index_n" name="index_n"></a>- n -</h3><ul>
 <li>name&#160;:&#160;<a class="el" href="classcotask_1_1_task.html#ab54e069dd0b4f0a2f8e7f00c94998a10">cotask.Task</a></li>
+<li>NCS&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#afec4c9012aee7b0b7276dd41961ddbc7">Stepper.TMC4210</a></li>
+<li>nCS&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a8d638396186ab29cfd53235d17e3877c">Stepper.TMC4210</a></li>
 </ul>
 
 
@@ -115,46 +131,62 @@ $(function() {
 
 
 <h3><a id="index_p" name="index_p"></a>- p -</h3><ul>
-<li>pArray&#160;:&#160;<a class="el" href="classcontrol_1_1_closed_loop.html#a1a17c1c1bffdafc197892c9c0e2dd756">control.ClosedLoop</a></li>
+<li>PdivRdiv_ad&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#afea86e1051aa1e8449a58b446a55181d">Stepper.TMC4210</a></li>
+<li>PdivRdiv_r2&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a29507e5abfe1bcb54883a139f5730f7f">Stepper.TMC4210</a></li>
 <li>period&#160;:&#160;<a class="el" href="classcotask_1_1_task.html#a44f980f61f1908764c6821fa886590ca">cotask.Task</a></li>
-<li>position&#160;:&#160;<a class="el" href="classencoder_1_1_encoder_driver.html#a9cc2828e9445c45bb5d4e753b8052f5a">encoder.EncoderDriver</a></li>
-<li>position1&#160;:&#160;<a class="el" href="classencoder_1_1_encoder_driver.html#afaf847ec6608c71b68e76918b0d46b80">encoder.EncoderDriver</a></li>
-<li>position2&#160;:&#160;<a class="el" href="classencoder_1_1_encoder_driver.html#ae826e939a2896ea58fc905e4a1bac6ae">encoder.EncoderDriver</a></li>
+<li>PmulPdiv_ad&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a54f6760b13c36cbf204dfbd98c131477">Stepper.TMC4210</a></li>
+<li>PmulPdiv_r2&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a7b813bb503ab4d6ea3c85dfa6a7f14b1">Stepper.TMC4210</a></li>
+<li>PmulPdiv_r3&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a83617d35f44b3be1524334b9035a7e11">Stepper.TMC4210</a></li>
 <li>pri_list&#160;:&#160;<a class="el" href="classcotask_1_1_task_list.html#aac6e53cb4fec80455198ff85c85a4b51">cotask.TaskList</a></li>
 <li>priority&#160;:&#160;<a class="el" href="classcotask_1_1_task.html#aeced93c7b7d23e33de9693d278aef88b">cotask.Task</a></li>
 </ul>
 
 
 <h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
-<li>R_Center&#160;:&#160;<a class="el" href="classchasy_1_1chassis.html#a6e53e6d3614db130aad735c72e915a26">chasy.chassis</a></li>
-<li>R_Wheel&#160;:&#160;<a class="el" href="classchasy_1_1chassis.html#ac49cffdda0945bd86bfa37096edf5297">chasy.chassis</a></li>
-<li>reference&#160;:&#160;<a class="el" href="classcontrol_1_1_closed_loop.html#a82361ad372f71d7df117c87bb12a5cdb">control.ClosedLoop</a></li>
-<li>right&#160;:&#160;<a class="el" href="classchasy_1_1chassis.html#abb5c16fbe3fa082114e74638ef0450e7">chasy.chassis</a></li>
+<li>rampmode_ad&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a25adb0dd722e67c2bb63abeb5350b3d5">Stepper.TMC4210</a></li>
+<li>rampmode_r1&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#af62d3198efc748638a535624047d6581">Stepper.TMC4210</a></li>
+<li>rampmode_r2&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#ac987f538e216cf69390d9edbd2247962">Stepper.TMC4210</a></li>
+<li>rampmode_r3&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#ab94c0fbea5adb572ceeb5a0c6845faed">Stepper.TMC4210</a></li>
+<li>rs_ad&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a2f7174a25464595f6912699b4a2b437a">Stepper.TMC4210</a></li>
+<li>rs_r1&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#aec140fe003e3ab124d0410ed6cdfc71b">Stepper.TMC4210</a></li>
 <li>RX2_array&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#add18bbbb6fe3c0189281be7e0822a4f1">Stepper.TMC4210</a></li>
 <li>RX_array&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a54c3245cd30be4ccba94f117fcf53871">Stepper.TMC4210</a></li>
 </ul>
 
 
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
-<li>saturation_high&#160;:&#160;<a class="el" href="classcontrol_1_1_closed_loop.html#a1ead9d48dea5938d2adeda1004cc2b07">control.ClosedLoop</a></li>
-<li>saturation_low&#160;:&#160;<a class="el" href="classcontrol_1_1_closed_loop.html#ae0cf4ef3d75f870ea897d87bb17c6f04">control.ClosedLoop</a></li>
 <li>ser_num&#160;:&#160;<a class="el" href="classtask__share_1_1_queue.html#a6f9d87b116eb16dba0867d3746af9f5f">task_share.Queue</a>, <a class="el" href="classtask__share_1_1_share.html#a2e8df029af46fbfd44ef0c2e7e8c7af6">task_share.Share</a></li>
+<li>spi&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a76fa4757c915d968d17027deea5c672a">Stepper.TMC4210</a></li>
 </ul>
 
 
 <h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
-<li>t0&#160;:&#160;<a class="el" href="classcontrol_1_1_closed_loop.html#ad8720c5de517079a71c1a9e4794323b2">control.ClosedLoop</a></li>
-<li>tArray&#160;:&#160;<a class="el" href="classcontrol_1_1_closed_loop.html#aa043c1f85d901b137f927d06a6e4803d">control.ClosedLoop</a></li>
 <li>tim&#160;:&#160;<a class="el" href="classmotor_1_1_motor_driver.html#a118e4dc66c36ac3d69b7fb393022710b">motor.MotorDriver</a></li>
-<li>timX&#160;:&#160;<a class="el" href="classencoder_1_1_encoder_driver.html#aa015d45cfbb45f3f3c570b0513979d90">encoder.EncoderDriver</a></li>
 <li>tr_ad&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#adebc2340081e8e8c3662591809b95a3f">Stepper.TMC4210</a></li>
-<li>tune_t&#160;:&#160;<a class="el" href="classchasy_1_1chassis.html#a5c748d5441e941a31ec0f878810e7417">chasy.chassis</a></li>
 <li>TX2_array&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a9969db9b344d5adabd98a13bcfc95ac9">Stepper.TMC4210</a></li>
+<li>TX_array&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#aff551184f28dfebab17eb45376dc481a">Stepper.TMC4210</a></li>
+</ul>
+
+
+<h3><a id="index_v" name="index_v"></a>- v -</h3><ul>
+<li>vmax_ad&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a908a878d8d294692788878362f4d38a0">Stepper.TMC4210</a></li>
+<li>vmax_r3&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a398c072e0e7b6a675141ccfccb4e2657">Stepper.TMC4210</a></li>
+<li>vmin_ad&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a57789d0880eae02d14e056c5c807c67e">Stepper.TMC4210</a></li>
+<li>vmin_r3&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a59e86bfe12e2a1c545dcc8f97955044e">Stepper.TMC4210</a></li>
+</ul>
+
+
+<h3><a id="index_x" name="index_x"></a>- x -</h3><ul>
+<li>xtar1&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#ac0876daa1e099d1c26bdc59d41f778d4">Stepper.TMC4210</a></li>
+<li>xtar2&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#ad3b2549e718dfaf411bec86ad004792b">Stepper.TMC4210</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
 </body>
 </html>

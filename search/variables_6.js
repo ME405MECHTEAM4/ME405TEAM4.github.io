@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['left_0',['left',['../classchasy_1_1chassis.html#a6f5d953d504de5b254e9921ecb689a82',1,'chasy::chassis']]]
+  ['motor1_0',['motor1',['../namespacemain.html#a3a2f088acede9b226beb08b70c42f146',1,'main']]],
+  ['motor2_1',['motor2',['../namespacemain.html#a1a2262732e6726079ffed3e075851a70',1,'main']]]
 ];

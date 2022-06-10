@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -24,6 +33,21 @@
    <div id="projectname">ME405TermProject
    </div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -35,17 +59,23 @@
 var searchBox = new SearchBox("searchBox", "search",'Search','.html');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
+$(document).ready(function(){initNavTree('405_t_p_page.html',''); initResizable(); });
 /* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,30 +90,19 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div><div class="header">
   <div class="headertitle"><div class="title">Term Project </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p >ME 405 Term Project.</p>
-<p >This Term Project was aimed to create a pen plotter using the nucleo microcontroller and TMC2208 and TMC 4210 drivers.</p>
-<dl class="section author"><dt>Author</dt><dd>Matteo Gozzini <br  />
- </dd>
-<dd>
-Miles Ibarra </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>06-10-22</dd></dl>
+<div class="textblock"><p >This Term Project was aimed to create a pen plotter using the nucleo microcontroller and TMC2208 and TMC 4210 drivers.</p>
 <h1><a class="anchor" id="section1"></a>
 Files for Term Project</h1>
 <p >Here are the links to all the complete file and details for the Term Project. <br  />
- File: main.py <br  />
+ File: <a class="el" href="main_8py.html">main.py</a> <br  />
  File: <a class="el" href="task__share_8py.html">task_share.py</a> <br  />
  File: <a class="el" href="cotask_8py.html">cotask.py</a> <br  />
- File: chasy.py <br  />
- File: control.py <br  />
- File: decTHex.py <br  />
- File: encoder.py <br  />
- File: motor.py <br  />
- File: Stepper.py <br  />
+ File: <a class="el" href="motor_8py.html">motor.py</a> <br  />
+ File: <a class="el" href="_stepper_8py.html">Stepper.py</a> <br  />
  Repository File Link: <a href="https://bitbucket.org/mime305/mime305.bitbucket.io/src/master/Term%20Project/">https://bitbucket.org/mime305/mime305.bitbucket.io/src/master/Term%20Project/</a> <br  />
  Video Demonstration: <a href="https://drive.google.com/file/d/1O92MHnQORKZ-1yQg_3kzjiBA-JIQwFbI/view">https://drive.google.com/file/d/1O92MHnQORKZ-1yQg_3kzjiBA-JIQwFbI/view</a></p>
 <h1><a class="anchor" id="section2"></a>
@@ -133,26 +152,24 @@ Term Project Cad Models</h1>
 </p>
 <h1><a class="anchor" id="section6"></a>
 Term Project Plots</h1>
-<p >This image contains the codels and drawings for our project. The first set of images are of the car body. This shows how the body was modeled as well as the dimensions of the overall body. <br  />
-</p>
-<div class="image">
-<img src="PLOT7.png" alt="" width="500px"/>
+<p >These images are the plots produced for our code. The first image is the hpgl file we created in Inkscape to be sent to the microcontroller. This file is parsed and used to create the pattern shown in the second image. <br  />
+ </p><div class="image">
+<img src="hpgl.png" alt="" width="500px"/>
 </div>
 <p> <br  />
  </p><div class="image">
-<img src="PLOT8.png" alt="" width="500px"/>
-</div>
-<p> <br  />
- </p><div class="image">
-<img src="PLOT9.png" alt="" width="500px"/>
+<img src="SerialCarPlot.png" alt="" width="500px"/>
 </div>
 <p> <br  />
  </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
 </body>
 </html>

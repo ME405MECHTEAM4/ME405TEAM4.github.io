@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['chassis_0',['chassis',['../classchasy_1_1chassis.html',1,'chasy']]],
-  ['closedloop_1',['ClosedLoop',['../classcontrol_1_1_closed_loop.html',1,'control']]]
+  ['motordriver_0',['MotorDriver',['../classmotor_1_1_motor_driver.html',1,'motor']]]
 ];

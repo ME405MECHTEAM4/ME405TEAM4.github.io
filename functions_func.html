@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -24,6 +33,21 @@
    <div id="projectname">ME405TermProject
    </div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -35,18 +59,23 @@
 var searchBox = new SearchBox("searchBox", "search",'Search','.html');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
+$(document).ready(function(){initNavTree('functions_func.html',''); initResizable(); });
 /* @license-end */
 </script>
-<div id="main-nav"></div>
-</div><!-- top -->
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -65,12 +94,13 @@ $(function() {
 &#160;
 
 <h3><a id="index__5F" name="index__5F"></a>- _ -</h3><ul>
-<li>__init__()&#160;:&#160;<a class="el" href="classchasy_1_1chassis.html#a3de54ee71f56698a5f85fba42d25c2e2">chasy.chassis</a>, <a class="el" href="classcontrol_1_1_closed_loop.html#abe66d461bf52cb1c9c5c314adbc19bb4">control.ClosedLoop</a>, <a class="el" href="classcotask_1_1_task.html#a912aa5a1bed736fa76e110ab0448e97b">cotask.Task</a>, <a class="el" href="classcotask_1_1_task_list.html#a288413cdeddf60664542a92ce201200a">cotask.TaskList</a>, <a class="el" href="classencoder_1_1_encoder_driver.html#a8183fa5df30f58cd6460f23e3ecf7b4e">encoder.EncoderDriver</a>, <a class="el" href="classmotor_1_1_motor_driver.html#a87ba601be3026514b178d7fee584aed0">motor.MotorDriver</a>, <a class="el" href="classtask__share_1_1_base_share.html#aecdc98ad6b42e05f481cf3ffa5f72ad4">task_share.BaseShare</a>, <a class="el" href="classtask__share_1_1_queue.html#a9b93f7ca745b59f404b3b92958ffe456">task_share.Queue</a>, <a class="el" href="classtask__share_1_1_share.html#a3139fd0c5d1df7fc15e003892d557b9a">task_share.Share</a></li>
+<li>__init__()&#160;:&#160;<a class="el" href="classcotask_1_1_task.html#a912aa5a1bed736fa76e110ab0448e97b">cotask.Task</a>, <a class="el" href="classcotask_1_1_task_list.html#a288413cdeddf60664542a92ce201200a">cotask.TaskList</a>, <a class="el" href="classmotor_1_1_motor_driver.html#a87ba601be3026514b178d7fee584aed0">motor.MotorDriver</a>, <a class="el" href="class_stepper_1_1_t_m_c4210.html#ae8a5241a5e27ca73756d37bf4c49a6e1">Stepper.TMC4210</a>, <a class="el" href="classtask__share_1_1_base_share.html#aecdc98ad6b42e05f481cf3ffa5f72ad4">task_share.BaseShare</a>, <a class="el" href="classtask__share_1_1_queue.html#a9b93f7ca745b59f404b3b92958ffe456">task_share.Queue</a>, <a class="el" href="classtask__share_1_1_share.html#a3139fd0c5d1df7fc15e003892d557b9a">task_share.Share</a></li>
 <li>__repr__()&#160;:&#160;<a class="el" href="classcotask_1_1_task.html#a2dcb50b9bf2676dfaac176649bc7d3f9">cotask.Task</a>, <a class="el" href="classcotask_1_1_task_list.html#aa0632311ba902d3e5d75167dd4215dda">cotask.TaskList</a>, <a class="el" href="classtask__share_1_1_queue.html#a94d0801557844c8f7dcb772ca768a1a4">task_share.Queue</a>, <a class="el" href="classtask__share_1_1_share.html#a09c1c075ae99ea33030dd9de7b9ae470">task_share.Share</a></li>
 </ul>
 
 
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
+<li>Amax()&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#aab4a01d6de7a6bcdcc5156d456d8a372">Stepper.TMC4210</a></li>
 <li>any()&#160;:&#160;<a class="el" href="classtask__share_1_1_queue.html#a7cb2d23978b90a232cf9cea4cc0ccb6b">task_share.Queue</a></li>
 <li>append()&#160;:&#160;<a class="el" href="classcotask_1_1_task_list.html#aa690015d692390e17cb777ff367ae159">cotask.TaskList</a></li>
 </ul>
@@ -78,6 +108,7 @@ $(function() {
 
 <h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
 <li>clear()&#160;:&#160;<a class="el" href="classtask__share_1_1_queue.html#aeac8766461d55d5717dd79fede402007">task_share.Queue</a></li>
+<li>Clockinit()&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#af75d0cefadd3b80b4c97013db9be5dea">Stepper.TMC4210</a></li>
 </ul>
 
 
@@ -88,24 +119,29 @@ $(function() {
 
 <h3><a id="index_e" name="index_e"></a>- e -</h3><ul>
 <li>empty()&#160;:&#160;<a class="el" href="classtask__share_1_1_queue.html#af9ada059fc09a44adc9084901e2f7266">task_share.Queue</a></li>
-<li>enable()&#160;:&#160;<a class="el" href="classmotor_1_1_motor_driver.html#a505de7dca7e746db2c51d5ae14ad5823">motor.MotorDriver</a></li>
+<li>enable()&#160;:&#160;<a class="el" href="classmotor_1_1_motor_driver.html#a505de7dca7e746db2c51d5ae14ad5823">motor.MotorDriver</a>, <a class="el" href="class_stepper_1_1_t_m_c4210.html#a33f4f5de98e95be00c5607ed81e75616">Stepper.TMC4210</a></li>
 </ul>
 
 
 <h3><a id="index_f" name="index_f"></a>- f -</h3><ul>
-<li>find_motor_dists()&#160;:&#160;<a class="el" href="classchasy_1_1chassis.html#a74dd294027c76b495d2230806e765405">chasy.chassis</a></li>
 <li>full()&#160;:&#160;<a class="el" href="classtask__share_1_1_queue.html#a0482d70ce6405fd8d85628b5cf95d471">task_share.Queue</a></li>
 </ul>
 
 
 <h3><a id="index_g" name="index_g"></a>- g -</h3><ul>
 <li>get()&#160;:&#160;<a class="el" href="classtask__share_1_1_queue.html#af2aef1dd3eed21c4b6c2e601cb8497d4">task_share.Queue</a>, <a class="el" href="classtask__share_1_1_share.html#a599cd89ed1cd79af8795a51d8de70d27">task_share.Share</a></li>
-<li>get_delta()&#160;:&#160;<a class="el" href="classencoder_1_1_encoder_driver.html#ac367cfb053946a822bc70c4129f9fa2a">encoder.EncoderDriver</a></li>
-<li>get_Kp()&#160;:&#160;<a class="el" href="classcontrol_1_1_closed_loop.html#a92d863add9661a34ae1ca89980958837">control.ClosedLoop</a></li>
-<li>get_position()&#160;:&#160;<a class="el" href="classencoder_1_1_encoder_driver.html#a562e77151e296465959df10f63af26f8">encoder.EncoderDriver</a></li>
 <li>get_trace()&#160;:&#160;<a class="el" href="classcotask_1_1_task.html#a6e51a228f985aec8c752bd72a73730ae">cotask.Task</a></li>
-<li>getReference()&#160;:&#160;<a class="el" href="classcontrol_1_1_closed_loop.html#a0bb6dfac6c7d5e443a2f41f5d51adccd">control.ClosedLoop</a></li>
 <li>go()&#160;:&#160;<a class="el" href="classcotask_1_1_task.html#a78e74d18a5ba94074c2b5309394409a5">cotask.Task</a></li>
+</ul>
+
+
+<h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
+<li>if_config()&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#ab94bad862a0690c527bacd03dfe820cb">Stepper.TMC4210</a></li>
+</ul>
+
+
+<h3><a id="index_m" name="index_m"></a>- m -</h3><ul>
+<li>mode()&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a02b946eea221927ab8e9ac5dd9bb2515">Stepper.TMC4210</a></li>
 </ul>
 
 
@@ -115,38 +151,49 @@ $(function() {
 
 
 <h3><a id="index_p" name="index_p"></a>- p -</h3><ul>
+<li>PdivRdiv()&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a9bab5e7a9d35c83eb5c96bc8cc524cbf">Stepper.TMC4210</a></li>
+<li>Pmul_Pdiv()&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#ae216e22280d501c68109431e635622f6">Stepper.TMC4210</a></li>
 <li>pri_sched()&#160;:&#160;<a class="el" href="classcotask_1_1_task_list.html#a5f7b264614e8e22c28d4c1509e3f30d8">cotask.TaskList</a></li>
-<li>print_data()&#160;:&#160;<a class="el" href="classcontrol_1_1_closed_loop.html#a4e716d03c6fcf7e1c9b6ecba9d4f304c">control.ClosedLoop</a></li>
 <li>put()&#160;:&#160;<a class="el" href="classtask__share_1_1_queue.html#ae785bdf9d397d61729c22656471a81df">task_share.Queue</a>, <a class="el" href="classtask__share_1_1_share.html#ab449c261f259db176ffeea55ccbf5d96">task_share.Share</a></li>
 </ul>
 
 
 <h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
 <li>ready()&#160;:&#160;<a class="el" href="classcotask_1_1_task.html#a6102bc35d7cb1ce292abc85d4ddc23e1">cotask.Task</a></li>
+<li>ref_switch()&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a8df8508a7b21608461b026c65e395570">Stepper.TMC4210</a></li>
 <li>reset_profile()&#160;:&#160;<a class="el" href="classcotask_1_1_task.html#a1bcbfa7dd7086112af20b7247ffa4a2e">cotask.Task</a></li>
 <li>rr_sched()&#160;:&#160;<a class="el" href="classcotask_1_1_task_list.html#a01614098aedc87b465d5525c6ccb47ce">cotask.TaskList</a></li>
-<li>run()&#160;:&#160;<a class="el" href="classcontrol_1_1_closed_loop.html#a9e9638c861722da59e659154dde54793">control.ClosedLoop</a></li>
 </ul>
 
 
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
 <li>schedule()&#160;:&#160;<a class="el" href="classcotask_1_1_task.html#af60def0ed4a1bc5fec32f3cf8b8a90c8">cotask.Task</a></li>
-<li>send_data()&#160;:&#160;<a class="el" href="classcontrol_1_1_closed_loop.html#af28a75a2e0d8678dcb92ca8d639d2e31">control.ClosedLoop</a></li>
 <li>set_duty_cycle()&#160;:&#160;<a class="el" href="classmotor_1_1_motor_driver.html#a106e66d42da14f0957985a36a3d4af37">motor.MotorDriver</a></li>
-<li>set_Kp()&#160;:&#160;<a class="el" href="classcontrol_1_1_closed_loop.html#a1c35274dc633076334103a915a5bc016">control.ClosedLoop</a></li>
 <li>set_period()&#160;:&#160;<a class="el" href="classcotask_1_1_task.html#a310e065fb576dff0e23d075c4e83a5f4">cotask.Task</a></li>
-<li>set_position()&#160;:&#160;<a class="el" href="classencoder_1_1_encoder_driver.html#a3e0a9b7b0088b40c44e8de95102dcc71">encoder.EncoderDriver</a></li>
-<li>setReference()&#160;:&#160;<a class="el" href="classcontrol_1_1_closed_loop.html#a0f120d4c2108eccf22f669e06aab4497">control.ClosedLoop</a></li>
 </ul>
 
 
-<h3><a id="index_u" name="index_u"></a>- u -</h3><ul>
-<li>update()&#160;:&#160;<a class="el" href="classencoder_1_1_encoder_driver.html#af95b34363dcc857b486c55439c72542d">encoder.EncoderDriver</a></li>
+<h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
+<li>type_reg()&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a8b265b98babbe49c583951ad1dac9cb1">Stepper.TMC4210</a></li>
+</ul>
+
+
+<h3><a id="index_v" name="index_v"></a>- v -</h3><ul>
+<li>v_max()&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a53fa7311f10cbd7b6e46ac551d8b0693">Stepper.TMC4210</a></li>
+<li>v_min()&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a2a1dfa6d99ee1735fcdfb42670098398">Stepper.TMC4210</a></li>
+</ul>
+
+
+<h3><a id="index_x" name="index_x"></a>- x -</h3><ul>
+<li>x_target()&#160;:&#160;<a class="el" href="class_stepper_1_1_t_m_c4210.html#a2ac6b96d3917707daf4b6e770c6d9dc7">Stepper.TMC4210</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
 </body>
 </html>

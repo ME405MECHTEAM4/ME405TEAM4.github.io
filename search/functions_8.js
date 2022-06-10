@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['pri_5fsched_0',['pri_sched',['../classcotask_1_1_task_list.html#a5f7b264614e8e22c28d4c1509e3f30d8',1,'cotask::TaskList']]],
-  ['print_5fdata_1',['print_data',['../classcontrol_1_1_closed_loop.html#a4e716d03c6fcf7e1c9b6ecba9d4f304c',1,'control::ClosedLoop']]],
-  ['put_2',['put',['../classtask__share_1_1_queue.html#ae785bdf9d397d61729c22656471a81df',1,'task_share.Queue.put()'],['../classtask__share_1_1_share.html#ab449c261f259db176ffeea55ccbf5d96',1,'task_share.Share.put()']]]
+  ['mode_0',['mode',['../class_stepper_1_1_t_m_c4210.html#a02b946eea221927ab8e9ac5dd9bb2515',1,'Stepper::TMC4210']]],
+  ['motor_5ftask_1',['motor_task',['../namespacemain.html#a22c02d46e13fef03586e7261503784e6',1,'main']]]
 ];

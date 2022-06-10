@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -24,6 +33,21 @@
    <div id="projectname">ME405TermProject
    </div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -35,17 +59,23 @@
 var searchBox = new SearchBox("searchBox", "search",'Search','.html');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
+$(document).ready(function(){initNavTree('class_stepper_1_1_t_m_c4210.html',''); initResizable(); });
 /* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +90,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>Stepper</b></li><li class="navelem"><a class="el" href="class_stepper_1_1_t_m_c4210.html">TMC4210</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">Stepper.TMC4210 Member List</div></div>
 </div><!--header-->
@@ -72,54 +97,57 @@ $(function() {
 
 <p>This is the complete list of members for <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>__init__</b>(self, nCS, NCS, spi, EN, En, config1, config2, xtar1, xtar2) (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>Amax</b>(self) (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Amax_ad</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>Amax_r3</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Clockinit</b>() (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>config1</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>config2</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>EN</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>En</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>enable</b>(self) (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>if_config</b>(self) (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>mode</b>(self) (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>NCS</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>nCS</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>PdivRdiv</b>(self) (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>PdivRdiv_ad</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>PdivRdiv_r2</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>Pmul_Pdiv</b>(self) (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>PmulPdiv_ad</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>PmulPdiv_r2</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>PmulPdiv_r3</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>rampmode_ad</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>rampmode_r1</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>rampmode_r2</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>rampmode_r3</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>ref_switch</b>(self) (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>rs_ad</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>rs_r1</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#ae8a5241a5e27ca73756d37bf4c49a6e1">__init__</a>(self, nCS, NCS, spi, EN, En, config1, config2, xtar1, xtar2)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#aab4a01d6de7a6bcdcc5156d456d8a372">Amax</a>(self)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#ac052a4b0fc37f85dc5b07df8c0289b70">Amax_ad</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#aa7053a939680b7fc9a03af2decede7af">Amax_r3</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#af75d0cefadd3b80b4c97013db9be5dea">Clockinit</a>()</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a29c38cdce79432b783b256fe5c1f8a50">config1</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a94fd12e3a3a219d7cb1d2c1d947983da">config2</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a26960cf569ebd52bc8e737332cf456e5">EN</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#aa4fbb4b0cf177e57396a69e02b4b721d">En</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a33f4f5de98e95be00c5607ed81e75616">enable</a>(self)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#ab94bad862a0690c527bacd03dfe820cb">if_config</a>(self)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a02b946eea221927ab8e9ac5dd9bb2515">mode</a>(self)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#afec4c9012aee7b0b7276dd41961ddbc7">NCS</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a8d638396186ab29cfd53235d17e3877c">nCS</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a9bab5e7a9d35c83eb5c96bc8cc524cbf">PdivRdiv</a>(self)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#afea86e1051aa1e8449a58b446a55181d">PdivRdiv_ad</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a29507e5abfe1bcb54883a139f5730f7f">PdivRdiv_r2</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#ae216e22280d501c68109431e635622f6">Pmul_Pdiv</a>(self)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a54f6760b13c36cbf204dfbd98c131477">PmulPdiv_ad</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a7b813bb503ab4d6ea3c85dfa6a7f14b1">PmulPdiv_r2</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a83617d35f44b3be1524334b9035a7e11">PmulPdiv_r3</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a25adb0dd722e67c2bb63abeb5350b3d5">rampmode_ad</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#af62d3198efc748638a535624047d6581">rampmode_r1</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#ac987f538e216cf69390d9edbd2247962">rampmode_r2</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#ab94c0fbea5adb572ceeb5a0c6845faed">rampmode_r3</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a8df8508a7b21608461b026c65e395570">ref_switch</a>(self)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a2f7174a25464595f6912699b4a2b437a">rs_ad</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#aec140fe003e3ab124d0410ed6cdfc71b">rs_r1</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#add18bbbb6fe3c0189281be7e0822a4f1">RX2_array</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a54c3245cd30be4ccba94f117fcf53871">RX_array</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>spi</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a76fa4757c915d968d17027deea5c672a">spi</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#adebc2340081e8e8c3662591809b95a3f">tr_ad</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a9969db9b344d5adabd98a13bcfc95ac9">TX2_array</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>TX_array</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>type_reg</b>(self) (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>v_max</b>(self) (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>v_min</b>(self) (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>vmax_ad</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>vmax_r3</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>vmin_ad</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>vmin_r3</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>x_target</b>(self) (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>xtar1</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>xtar2</b> (defined in <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#aff551184f28dfebab17eb45376dc481a">TX_array</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a8b265b98babbe49c583951ad1dac9cb1">type_reg</a>(self)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a53fa7311f10cbd7b6e46ac551d8b0693">v_max</a>(self)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a2a1dfa6d99ee1735fcdfb42670098398">v_min</a>(self)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a908a878d8d294692788878362f4d38a0">vmax_ad</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a398c072e0e7b6a675141ccfccb4e2657">vmax_r3</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a57789d0880eae02d14e056c5c807c67e">vmin_ad</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a59e86bfe12e2a1c545dcc8f97955044e">vmin_r3</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#a2ac6b96d3917707daf4b6e770c6d9dc7">x_target</a>(self)</td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#ac0876daa1e099d1c26bdc59d41f778d4">xtar1</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html#ad3b2549e718dfaf411bec86ad004792b">xtar2</a></td><td class="entry"><a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
 </body>
 </html>
