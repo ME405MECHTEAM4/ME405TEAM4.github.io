@@ -29,6 +29,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Cal Poly ME logo.png"/></td>
   <td id="projectalign">
    <div id="projectname">ME405TermProject
    </div>
@@ -98,6 +99,9 @@ $(document).ready(function(){initNavTree('main_8py.html',''); initResizable(); }
   <div class="headertitle"><div class="title">main.py File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>This is the main file that sends data to <a class="el" href="_stepper_8py.html">stepper.py</a> and task_motor.py to control the dc and the two stepper motors.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -107,64 +111,27 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a22c02d46e13fef03586e7261503784e6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a22c02d46e13fef03586e7261503784e6">main.motor_task</a> ()</td></tr>
-<tr class="memdesc:a22c02d46e13fef03586e7261503784e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task controls motor 1.  <a href="namespacemain.html#a22c02d46e13fef03586e7261503784e6">More...</a><br /></td></tr>
 <tr class="separator:a22c02d46e13fef03586e7261503784e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2575db504c57bc2f399cd1c0dc7746b9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a2575db504c57bc2f399cd1c0dc7746b9">main.task_MCU2</a> ()</td></tr>
-<tr class="memdesc:a2575db504c57bc2f399cd1c0dc7746b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task controls motor 2.  <a href="namespacemain.html#a2575db504c57bc2f399cd1c0dc7746b9">More...</a><br /></td></tr>
-<tr class="separator:a2575db504c57bc2f399cd1c0dc7746b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ca60bf53635dff2895321703bbcd091"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a3ca60bf53635dff2895321703bbcd091">main.task_interpret</a> ()</td></tr>
-<tr class="memdesc:a3ca60bf53635dff2895321703bbcd091"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task interprets commands from file to control certain motors.  <a href="namespacemain.html#a3ca60bf53635dff2895321703bbcd091">More...</a><br /></td></tr>
-<tr class="separator:a3ca60bf53635dff2895321703bbcd091"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e3110e2e5e483f0eee2db384c66c5d2"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a3e3110e2e5e483f0eee2db384c66c5d2">main.task_parse</a> ()</td></tr>
-<tr class="memdesc:a3e3110e2e5e483f0eee2db384c66c5d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task parses file for commands.  <a href="namespacemain.html#a3e3110e2e5e483f0eee2db384c66c5d2">More...</a><br /></td></tr>
-<tr class="separator:a3e3110e2e5e483f0eee2db384c66c5d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e1bb502333c17ba766ca946cb1d3bd7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a5e1bb502333c17ba766ca946cb1d3bd7">main.task_parse</a> ()</td></tr>
+<tr class="separator:a5e1bb502333c17ba766ca946cb1d3bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a6912decaf876e20842a04646de0acafd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a6912decaf876e20842a04646de0acafd">main.right</a> = 1.01</td></tr>
-<tr class="memdesc:a6912decaf876e20842a04646de0acafd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Right wheel tuning parameter.  <a href="namespacemain.html#a6912decaf876e20842a04646de0acafd">More...</a><br /></td></tr>
-<tr class="separator:a6912decaf876e20842a04646de0acafd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a048cdc273929dee1ed32f8d6862ee640"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a048cdc273929dee1ed32f8d6862ee640">main.left</a> = 1.01</td></tr>
-<tr class="memdesc:a048cdc273929dee1ed32f8d6862ee640"><td class="mdescLeft">&#160;</td><td class="mdescRight">Left wheel tuning parameter.  <a href="namespacemain.html#a048cdc273929dee1ed32f8d6862ee640">More...</a><br /></td></tr>
-<tr class="separator:a048cdc273929dee1ed32f8d6862ee640"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e33eb620013e26f7fab48ea9c932b80"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a0e33eb620013e26f7fab48ea9c932b80">main.tune</a> = 1.02</td></tr>
-<tr class="memdesc:a0e33eb620013e26f7fab48ea9c932b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chassis tuning parameter.  <a href="namespacemain.html#a0e33eb620013e26f7fab48ea9c932b80">More...</a><br /></td></tr>
-<tr class="separator:a0e33eb620013e26f7fab48ea9c932b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae28b7de5482ab2ecf4ba6261fcae3ed7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#ae28b7de5482ab2ecf4ba6261fcae3ed7">main.center</a> = 3.03</td></tr>
-<tr class="memdesc:ae28b7de5482ab2ecf4ba6261fcae3ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pen POC to wheel distance.  <a href="namespacemain.html#ae28b7de5482ab2ecf4ba6261fcae3ed7">More...</a><br /></td></tr>
-<tr class="separator:ae28b7de5482ab2ecf4ba6261fcae3ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27a32391d68c80207e2ec97cfc6ebce4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a27a32391d68c80207e2ec97cfc6ebce4">main.wheel</a> = 2.53/2</td></tr>
-<tr class="memdesc:a27a32391d68c80207e2ec97cfc6ebce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wheel radius.  <a href="namespacemain.html#a27a32391d68c80207e2ec97cfc6ebce4">More...</a><br /></td></tr>
-<tr class="separator:a27a32391d68c80207e2ec97cfc6ebce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae874c17732da902054ce143a34991847"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#ae874c17732da902054ce143a34991847">main.gear</a> = 16/71</td></tr>
-<tr class="memdesc:ae874c17732da902054ce143a34991847"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gear ratio.  <a href="namespacemain.html#ae874c17732da902054ce143a34991847">More...</a><br /></td></tr>
-<tr class="separator:ae874c17732da902054ce143a34991847"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ea468c13a128e170baf72e2fdeca4d2"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a3ea468c13a128e170baf72e2fdeca4d2">main.encoder</a> = (256*16*4/360)</td></tr>
-<tr class="memdesc:a3ea468c13a128e170baf72e2fdeca4d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encoder conversion factor.  <a href="namespacemain.html#a3ea468c13a128e170baf72e2fdeca4d2">More...</a><br /></td></tr>
-<tr class="separator:a3ea468c13a128e170baf72e2fdeca4d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab29fb78c71f04b0610c1bf767339e7d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#ab29fb78c71f04b0610c1bf767339e7d6">main.chass</a> = ch.chassis(center, wheel, gear, encoder, tune, right, left)</td></tr>
-<tr class="memdesc:ab29fb78c71f04b0610c1bf767339e7d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Driver for chassis.  <a href="namespacemain.html#ab29fb78c71f04b0610c1bf767339e7d6">More...</a><br /></td></tr>
-<tr class="separator:ab29fb78c71f04b0610c1bf767339e7d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a2f088acede9b226beb08b70c42f146"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a3a2f088acede9b226beb08b70c42f146">main.motor1</a> = moe.MotorDriver(pyb.Pin.cpu.A10, pyb.Pin.cpu.B4, pyb.Pin.cpu.B5, 3)</td></tr>
-<tr class="memdesc:a3a2f088acede9b226beb08b70c42f146"><td class="mdescLeft">&#160;</td><td class="mdescRight">Driver object for first motor.  <a href="namespacemain.html#a3a2f088acede9b226beb08b70c42f146">More...</a><br /></td></tr>
-<tr class="separator:a3a2f088acede9b226beb08b70c42f146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a460dc6bab0128743ddd12367e8bec292"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a460dc6bab0128743ddd12367e8bec292">main.idx</a> = 0</td></tr>
+<tr class="memdesc:a460dc6bab0128743ddd12367e8bec292"><td class="mdescLeft">&#160;</td><td class="mdescRight">global variable that helps determine when our robot is meant to draw a line or turn so that we can change the wheel configuration (allows the wheel to run forwards or backwards depending on line or turn)  <a href="namespacemain.html#a460dc6bab0128743ddd12367e8bec292">More...</a><br /></td></tr>
+<tr class="separator:a460dc6bab0128743ddd12367e8bec292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49ae21d36dc3824d1188271c5465f86d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a49ae21d36dc3824d1188271c5465f86d">main.dec_val</a> = 0</td></tr>
+<tr class="memdesc:a49ae21d36dc3824d1188271c5465f86d"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts the clock for spi communication  <a href="namespacemain.html#a49ae21d36dc3824d1188271c5465f86d">More...</a><br /></td></tr>
+<tr class="separator:a49ae21d36dc3824d1188271c5465f86d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1445d29b53e8e8375fa82cf842f5fc9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#ae1445d29b53e8e8375fa82cf842f5fc9">main.TX</a> = bytearray(4)</td></tr>
+<tr class="separator:ae1445d29b53e8e8375fa82cf842f5fc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1f17995a8208e5fc26f10de3ef6bf4e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#ae1f17995a8208e5fc26f10de3ef6bf4e">main.conversion</a> = 128/7.5</td></tr>
+<tr class="separator:ae1f17995a8208e5fc26f10de3ef6bf4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a2262732e6726079ffed3e075851a70"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a1a2262732e6726079ffed3e075851a70">main.motor2</a> = moe.MotorDriver(pyb.Pin.cpu.C1, pyb.Pin.cpu.A0, pyb.Pin.cpu.A1, 5)</td></tr>
-<tr class="memdesc:a1a2262732e6726079ffed3e075851a70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Driver object for second motor.  <a href="namespacemain.html#a1a2262732e6726079ffed3e075851a70">More...</a><br /></td></tr>
+<tr class="memdesc:a1a2262732e6726079ffed3e075851a70"><td class="mdescLeft">&#160;</td><td class="mdescRight">instantiates the dc motor pins  <a href="namespacemain.html#a1a2262732e6726079ffed3e075851a70">More...</a><br /></td></tr>
 <tr class="separator:a1a2262732e6726079ffed3e075851a70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a120ad412b4254af981df604b899a6ebf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a120ad412b4254af981df604b899a6ebf">main.enc1</a> = enc.EncoderDriver(pyb.Pin.cpu.B6, pyb.Pin.cpu.B7, 4)</td></tr>
-<tr class="memdesc:a120ad412b4254af981df604b899a6ebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Driver object for first encoder.  <a href="namespacemain.html#a120ad412b4254af981df604b899a6ebf">More...</a><br /></td></tr>
-<tr class="separator:a120ad412b4254af981df604b899a6ebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8290cb0b8b6ee24c36bb6a5b924a3fe5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a8290cb0b8b6ee24c36bb6a5b924a3fe5">main.enc2</a> = enc.EncoderDriver(pyb.Pin.cpu.C6, pyb.Pin.cpu.C7, 8)</td></tr>
-<tr class="memdesc:a8290cb0b8b6ee24c36bb6a5b924a3fe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Driver object for second encoder.  <a href="namespacemain.html#a8290cb0b8b6ee24c36bb6a5b924a3fe5">More...</a><br /></td></tr>
-<tr class="separator:a8290cb0b8b6ee24c36bb6a5b924a3fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a417a6b3d91ab283e5f635d2c9a42bf00"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a417a6b3d91ab283e5f635d2c9a42bf00">main.control1</a> = control.ClosedLoop(-100, 100, .009, 0, 0)</td></tr>
-<tr class="memdesc:a417a6b3d91ab283e5f635d2c9a42bf00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controller object for first motor.  <a href="namespacemain.html#a417a6b3d91ab283e5f635d2c9a42bf00">More...</a><br /></td></tr>
-<tr class="separator:a417a6b3d91ab283e5f635d2c9a42bf00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38fdff0b28a0daf3e4e4214c21b01231"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a38fdff0b28a0daf3e4e4214c21b01231">main.control2</a> = control.ClosedLoop(-100, 100, .009, 0, 0)</td></tr>
-<tr class="memdesc:a38fdff0b28a0daf3e4e4214c21b01231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controller object for second motor.  <a href="namespacemain.html#a38fdff0b28a0daf3e4e4214c21b01231">More...</a><br /></td></tr>
-<tr class="separator:a38fdff0b28a0daf3e4e4214c21b01231"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70aa51820df2da632b0c7439294627a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a70aa51820df2da632b0c7439294627a6">main.EN1</a> = Pin(Pin.cpu.B0, mode=Pin.OUT_PP, value=1)</td></tr>
-<tr class="memdesc:a70aa51820df2da632b0c7439294627a6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespace_stepper.html">Stepper</a> pins.  <a href="namespacemain.html#a70aa51820df2da632b0c7439294627a6">More...</a><br /></td></tr>
+<tr class="memdesc:a70aa51820df2da632b0c7439294627a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">enables the dc motor  <a href="namespacemain.html#a70aa51820df2da632b0c7439294627a6">More...</a><br /></td></tr>
 <tr class="separator:a70aa51820df2da632b0c7439294627a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba2c64817659fd7ee7319ac1853b01f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#aba2c64817659fd7ee7319ac1853b01f8">main.EN2</a> = Pin(Pin.cpu.C2, mode=Pin.OUT_PP, value=1)</td></tr>
 <tr class="separator:aba2c64817659fd7ee7319ac1853b01f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,152 +140,27 @@ Variables</h2></td></tr>
 <tr class="memitem:af551ce904e0952e08414c3358ca23ba6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#af551ce904e0952e08414c3358ca23ba6">main.nCS2</a> = pyb.Pin(pyb.Pin.cpu.C3, mode=pyb.Pin.OUT_PP, value=1)</td></tr>
 <tr class="separator:af551ce904e0952e08414c3358ca23ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abab94a6a726a567406da3ce30e43973b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#abab94a6a726a567406da3ce30e43973b">main.spi</a> = SPI(2, SPI.MASTER, baudrate=100000, polarity=1, phase=1, crc=None)</td></tr>
+<tr class="memdesc:abab94a6a726a567406da3ce30e43973b"><td class="mdescLeft">&#160;</td><td class="mdescRight">spi instantiation  <a href="namespacemain.html#abab94a6a726a567406da3ce30e43973b">More...</a><br /></td></tr>
 <tr class="separator:abab94a6a726a567406da3ce30e43973b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4b8f4290f8d32e70654f6deb864787f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#af4b8f4290f8d32e70654f6deb864787f">main.task1</a></td></tr>
-<tr class="memdesc:af4b8f4290f8d32e70654f6deb864787f"><td class="mdescLeft">&#160;</td><td class="mdescRight">SCK = Pin(Pin.cpu.B13, mode = Pin.OUT_PP) MOSI = Pin(Pin.cpu.B14, mode = Pin.OUT_PP) MISO = Pin(Pin.cpu.B15, mode = Pin.OUT_PP)  <a href="namespacemain.html#af4b8f4290f8d32e70654f6deb864787f">More...</a><br /></td></tr>
-<tr class="separator:af4b8f4290f8d32e70654f6deb864787f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99d189b8f9eb3784cf7d4e5c3241b562"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a99d189b8f9eb3784cf7d4e5c3241b562">main.task2</a></td></tr>
-<tr class="memdesc:a99d189b8f9eb3784cf7d4e5c3241b562"><td class="mdescLeft">&#160;</td><td class="mdescRight">Motor 2 Task.  <a href="namespacemain.html#a99d189b8f9eb3784cf7d4e5c3241b562">More...</a><br /></td></tr>
-<tr class="separator:a99d189b8f9eb3784cf7d4e5c3241b562"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a120516a5d42c212c898d4616d266077a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a120516a5d42c212c898d4616d266077a">main.task3</a></td></tr>
-<tr class="memdesc:a120516a5d42c212c898d4616d266077a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpreter Task.  <a href="namespacemain.html#a120516a5d42c212c898d4616d266077a">More...</a><br /></td></tr>
-<tr class="separator:a120516a5d42c212c898d4616d266077a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0ee3c5b5359f76becfe27534e82085f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#ac0ee3c5b5359f76becfe27534e82085f">main.task4</a></td></tr>
-<tr class="memdesc:ac0ee3c5b5359f76becfe27534e82085f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parser Task.  <a href="namespacemain.html#ac0ee3c5b5359f76becfe27534e82085f">More...</a><br /></td></tr>
-<tr class="separator:ac0ee3c5b5359f76becfe27534e82085f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8605cfa18c21a492250081fc9df9f1dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a8605cfa18c21a492250081fc9df9f1dc">main.share_ready1</a> = <a class="el" href="classtask__share_1_1_share.html">task_share.Share</a> ('f', thread_protect = False, name = &quot;Ready1&quot;)</td></tr>
-<tr class="memdesc:a8605cfa18c21a492250081fc9df9f1dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Share to ensure motor 1 is at the correct position.  <a href="namespacemain.html#a8605cfa18c21a492250081fc9df9f1dc">More...</a><br /></td></tr>
-<tr class="separator:a8605cfa18c21a492250081fc9df9f1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1b9a9f082ce5f7eb0066426cd1bf2ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#af1b9a9f082ce5f7eb0066426cd1bf2ed">main.share_ready2</a> = <a class="el" href="classtask__share_1_1_share.html">task_share.Share</a> ('f', thread_protect = False, name = &quot;Ready2&quot;)</td></tr>
-<tr class="memdesc:af1b9a9f082ce5f7eb0066426cd1bf2ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Share to ensure motor 2 is at the correct position.  <a href="namespacemain.html#af1b9a9f082ce5f7eb0066426cd1bf2ed">More...</a><br /></td></tr>
-<tr class="separator:af1b9a9f082ce5f7eb0066426cd1bf2ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40c604da03b8e62cc19067c8b17ed11a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a40c604da03b8e62cc19067c8b17ed11a">main.share_bothR</a> = <a class="el" href="classtask__share_1_1_share.html">task_share.Share</a> ('f', thread_protect = False, name = &quot;Ready2&quot;)</td></tr>
-<tr class="memdesc:a40c604da03b8e62cc19067c8b17ed11a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Share to ensure both motors are at the correct position.  <a href="namespacemain.html#a40c604da03b8e62cc19067c8b17ed11a">More...</a><br /></td></tr>
-<tr class="separator:a40c604da03b8e62cc19067c8b17ed11a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91745615e197ebf991c62c1ffd42d73b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a91745615e197ebf991c62c1ffd42d73b">main.share_comm</a> = <a class="el" href="classtask__share_1_1_share.html">task_share.Share</a> ('f', thread_protect = False, name = &quot;Command&quot;)</td></tr>
-<tr class="memdesc:a91745615e197ebf991c62c1ffd42d73b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Share storing commands between PC and Nucleo.  <a href="namespacemain.html#a91745615e197ebf991c62c1ffd42d73b">More...</a><br /></td></tr>
-<tr class="separator:a91745615e197ebf991c62c1ffd42d73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd185ee0cdb132c9e89f6157bb92faf6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#abd185ee0cdb132c9e89f6157bb92faf6">main.share_nextI</a> = <a class="el" href="classtask__share_1_1_share.html">task_share.Share</a> ('f', thread_protect = False, name = &quot;Stop&quot;)</td></tr>
-<tr class="memdesc:abd185ee0cdb132c9e89f6157bb92faf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Share storing next instruction for plotter tool to execute.  <a href="namespacemain.html#abd185ee0cdb132c9e89f6157bb92faf6">More...</a><br /></td></tr>
-<tr class="separator:abd185ee0cdb132c9e89f6157bb92faf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fb829ea16da67ea9b01dd0d45565573"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a4fb829ea16da67ea9b01dd0d45565573">main.share_currC</a> = <a class="el" href="classtask__share_1_1_share.html">task_share.Share</a> ('f', thread_protect = False, name = &quot;CurrentCommand&quot;)</td></tr>
-<tr class="memdesc:a4fb829ea16da67ea9b01dd0d45565573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current controller gain value.  <a href="namespacemain.html#a4fb829ea16da67ea9b01dd0d45565573">More...</a><br /></td></tr>
-<tr class="separator:a4fb829ea16da67ea9b01dd0d45565573"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e650d4953e420a1df3e756b66967d78"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a9e650d4953e420a1df3e756b66967d78">main.share_theta</a> = <a class="el" href="classtask__share_1_1_share.html">task_share.Share</a> ('f', thread_protect = False, name = &quot;ThetaVal&quot;)</td></tr>
-<tr class="memdesc:a9e650d4953e420a1df3e756b66967d78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotational distance for motors to travel.  <a href="namespacemain.html#a9e650d4953e420a1df3e756b66967d78">More...</a><br /></td></tr>
-<tr class="separator:a9e650d4953e420a1df3e756b66967d78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fc514bc13afbafad10f4e58f027a359"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a3fc514bc13afbafad10f4e58f027a359">main.share_dist</a> = <a class="el" href="classtask__share_1_1_share.html">task_share.Share</a> ('f', thread_protect = False, name = &quot;RadiusVal&quot;)</td></tr>
-<tr class="memdesc:a3fc514bc13afbafad10f4e58f027a359"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wheel radius shared value.  <a href="namespacemain.html#a3fc514bc13afbafad10f4e58f027a359">More...</a><br /></td></tr>
-<tr class="separator:a3fc514bc13afbafad10f4e58f027a359"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abafeefd40d43a19dd3327a6a08dd9cae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#abafeefd40d43a19dd3327a6a08dd9cae">main.share_pen</a> = <a class="el" href="classtask__share_1_1_share.html">task_share.Share</a> ('f', thread_protect = False, name = &quot;PenVal&quot;)</td></tr>
-<tr class="memdesc:abafeefd40d43a19dd3327a6a08dd9cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean indicating whether pen should be up or down.  <a href="namespacemain.html#abafeefd40d43a19dd3327a6a08dd9cae">More...</a><br /></td></tr>
-<tr class="separator:abafeefd40d43a19dd3327a6a08dd9cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe9060a06cf51d73765d64230ef0c465"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#abe9060a06cf51d73765d64230ef0c465">main.share_stop</a> = <a class="el" href="classtask__share_1_1_share.html">task_share.Share</a> ('f', thread_protect = False, name = &quot;Stop&quot;)</td></tr>
-<tr class="memdesc:abe9060a06cf51d73765d64230ef0c465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores value that stops the plotter device.  <a href="namespacemain.html#abe9060a06cf51d73765d64230ef0c465">More...</a><br /></td></tr>
-<tr class="separator:abe9060a06cf51d73765d64230ef0c465"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d53f7bd42208ebefdcd68768af0608c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a2d53f7bd42208ebefdcd68768af0608c">main.invConfig</a></td></tr>
-<tr class="memdesc:a2d53f7bd42208ebefdcd68768af0608c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Motor 1 Task.  <a href="namespacemain.html#a2d53f7bd42208ebefdcd68768af0608c">More...</a><br /></td></tr>
-<tr class="separator:a2d53f7bd42208ebefdcd68768af0608c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a642443987a97e6692776b243bb069d3a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a642443987a97e6692776b243bb069d3a">main.regConfig</a></td></tr>
-<tr class="separator:a642443987a97e6692776b243bb069d3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ceaea5938bad41abc086d0486991a52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a0ceaea5938bad41abc086d0486991a52">main.xtar0</a></td></tr>
-<tr class="memdesc:a0ceaea5938bad41abc086d0486991a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset  <a href="namespacemain.html#a0ceaea5938bad41abc086d0486991a52">More...</a><br /></td></tr>
-<tr class="separator:a0ceaea5938bad41abc086d0486991a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac81184506cb722f65b477b48a44109cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#ac81184506cb722f65b477b48a44109cf">main.xtar1</a></td></tr>
-<tr class="memdesc:ac81184506cb722f65b477b48a44109cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">forward line 1 128  <a href="namespacemain.html#ac81184506cb722f65b477b48a44109cf">More...</a><br /></td></tr>
-<tr class="separator:ac81184506cb722f65b477b48a44109cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad82e0b2fa3079d0ed64dbccabdb2d693"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#ad82e0b2fa3079d0ed64dbccabdb2d693">main.turn1</a></td></tr>
-<tr class="memdesc:ad82e0b2fa3079d0ed64dbccabdb2d693"><td class="mdescLeft">&#160;</td><td class="mdescRight">turn 1 240  <a href="namespacemain.html#ad82e0b2fa3079d0ed64dbccabdb2d693">More...</a><br /></td></tr>
-<tr class="separator:ad82e0b2fa3079d0ed64dbccabdb2d693"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35af9dcbaba4f7d1f3dc25d51e5336ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a35af9dcbaba4f7d1f3dc25d51e5336ec">main.xtar2</a></td></tr>
-<tr class="memdesc:a35af9dcbaba4f7d1f3dc25d51e5336ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">straight line 2 368  <a href="namespacemain.html#a35af9dcbaba4f7d1f3dc25d51e5336ec">More...</a><br /></td></tr>
-<tr class="separator:a35af9dcbaba4f7d1f3dc25d51e5336ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfbe6f9446f64b4e2d8f7d34b33ca17b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#adfbe6f9446f64b4e2d8f7d34b33ca17b">main.turn2</a></td></tr>
-<tr class="memdesc:adfbe6f9446f64b4e2d8f7d34b33ca17b"><td class="mdescLeft">&#160;</td><td class="mdescRight">turn 2 480  <a href="namespacemain.html#adfbe6f9446f64b4e2d8f7d34b33ca17b">More...</a><br /></td></tr>
-<tr class="separator:adfbe6f9446f64b4e2d8f7d34b33ca17b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f8637bd07040722e824fe005c7582e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a8f8637bd07040722e824fe005c7582e3">main.xtar3</a></td></tr>
-<tr class="memdesc:a8f8637bd07040722e824fe005c7582e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">line 3 608  <a href="namespacemain.html#a8f8637bd07040722e824fe005c7582e3">More...</a><br /></td></tr>
-<tr class="separator:a8f8637bd07040722e824fe005c7582e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bb8c2aee84c46312029faff638b83a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a8bb8c2aee84c46312029faff638b83a9">main.turn3</a></td></tr>
-<tr class="memdesc:a8bb8c2aee84c46312029faff638b83a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">turn 3 720  <a href="namespacemain.html#a8bb8c2aee84c46312029faff638b83a9">More...</a><br /></td></tr>
-<tr class="separator:a8bb8c2aee84c46312029faff638b83a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa70c2137130f05f34be5465f70ca47ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#aa70c2137130f05f34be5465f70ca47ef">main.xtar4</a></td></tr>
-<tr class="memdesc:aa70c2137130f05f34be5465f70ca47ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">line 4 848  <a href="namespacemain.html#aa70c2137130f05f34be5465f70ca47ef">More...</a><br /></td></tr>
-<tr class="separator:aa70c2137130f05f34be5465f70ca47ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06dbd704e454fa7045c3c5e3a859d3a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a06dbd704e454fa7045c3c5e3a859d3a2">main.turn4</a></td></tr>
-<tr class="memdesc:a06dbd704e454fa7045c3c5e3a859d3a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">turn 4 960  <a href="namespacemain.html#a06dbd704e454fa7045c3c5e3a859d3a2">More...</a><br /></td></tr>
-<tr class="separator:a06dbd704e454fa7045c3c5e3a859d3a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3548ee610b3423d56934ad7cf8e733d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a3548ee610b3423d56934ad7cf8e733d7">main.turn41</a></td></tr>
-<tr class="memdesc:a3548ee610b3423d56934ad7cf8e733d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">turn 4.1 1018  <a href="namespacemain.html#a3548ee610b3423d56934ad7cf8e733d7">More...</a><br /></td></tr>
-<tr class="separator:a3548ee610b3423d56934ad7cf8e733d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad838a976af08c0e40a464b4add071bc3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#ad838a976af08c0e40a464b4add071bc3">main.xtar5</a></td></tr>
-<tr class="memdesc:ad838a976af08c0e40a464b4add071bc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">line 5 (diag) 1146  <a href="namespacemain.html#ad838a976af08c0e40a464b4add071bc3">More...</a><br /></td></tr>
-<tr class="separator:ad838a976af08c0e40a464b4add071bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13dace0a533c4f77225efc0b6546137a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a13dace0a533c4f77225efc0b6546137a">main.xtar51</a></td></tr>
-<tr class="memdesc:a13dace0a533c4f77225efc0b6546137a"><td class="mdescLeft">&#160;</td><td class="mdescRight">line 51 (diag) 1193  <a href="namespacemain.html#a13dace0a533c4f77225efc0b6546137a">More...</a><br /></td></tr>
-<tr class="separator:a13dace0a533c4f77225efc0b6546137a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a2d6d75eb89a8f5447d476bb2fc4b6a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a1a2d6d75eb89a8f5447d476bb2fc4b6a">main.turn5</a></td></tr>
-<tr class="memdesc:a1a2d6d75eb89a8f5447d476bb2fc4b6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">turn 5 1305  <a href="namespacemain.html#a1a2d6d75eb89a8f5447d476bb2fc4b6a">More...</a><br /></td></tr>
-<tr class="separator:a1a2d6d75eb89a8f5447d476bb2fc4b6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01f36ee8cdc40b056f4332c46a72ba81"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a01f36ee8cdc40b056f4332c46a72ba81">main.turn51</a></td></tr>
-<tr class="memdesc:a01f36ee8cdc40b056f4332c46a72ba81"><td class="mdescLeft">&#160;</td><td class="mdescRight">turn 51 1363  <a href="namespacemain.html#a01f36ee8cdc40b056f4332c46a72ba81">More...</a><br /></td></tr>
-<tr class="separator:a01f36ee8cdc40b056f4332c46a72ba81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9a7a9e79e370209277491fd1a99bc8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#ad9a7a9e79e370209277491fd1a99bc8f">main.xtar6</a></td></tr>
-<tr class="memdesc:ad9a7a9e79e370209277491fd1a99bc8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">line 6 1491  <a href="namespacemain.html#ad9a7a9e79e370209277491fd1a99bc8f">More...</a><br /></td></tr>
-<tr class="separator:ad9a7a9e79e370209277491fd1a99bc8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae468b30a67c0f4508cdd6c64df6f8138"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#ae468b30a67c0f4508cdd6c64df6f8138">main.turn6</a></td></tr>
-<tr class="memdesc:ae468b30a67c0f4508cdd6c64df6f8138"><td class="mdescLeft">&#160;</td><td class="mdescRight">turn 6 1603  <a href="namespacemain.html#ae468b30a67c0f4508cdd6c64df6f8138">More...</a><br /></td></tr>
-<tr class="separator:ae468b30a67c0f4508cdd6c64df6f8138"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7144200ab0266a976ed01b190148ef9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a7144200ab0266a976ed01b190148ef9d">main.turn61</a></td></tr>
-<tr class="memdesc:a7144200ab0266a976ed01b190148ef9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">turn 61 1661  <a href="namespacemain.html#a7144200ab0266a976ed01b190148ef9d">More...</a><br /></td></tr>
-<tr class="separator:a7144200ab0266a976ed01b190148ef9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a070ffbd733238c03ca2abafaa5abf03d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a070ffbd733238c03ca2abafaa5abf03d">main.xtar7</a></td></tr>
-<tr class="memdesc:a070ffbd733238c03ca2abafaa5abf03d"><td class="mdescLeft">&#160;</td><td class="mdescRight">line 7 1789  <a href="namespacemain.html#a070ffbd733238c03ca2abafaa5abf03d">More...</a><br /></td></tr>
-<tr class="separator:a070ffbd733238c03ca2abafaa5abf03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0dcea728d17e2242a3d9eb0343776430"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a0dcea728d17e2242a3d9eb0343776430">main.xtar71</a></td></tr>
-<tr class="memdesc:a0dcea728d17e2242a3d9eb0343776430"><td class="mdescLeft">&#160;</td><td class="mdescRight">line 71 1828  <a href="namespacemain.html#a0dcea728d17e2242a3d9eb0343776430">More...</a><br /></td></tr>
-<tr class="separator:a0dcea728d17e2242a3d9eb0343776430"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad49a59bb9d2aa8ee2ff54a44c6cfb33c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#ad49a59bb9d2aa8ee2ff54a44c6cfb33c">main.Tzero</a> = <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>(nCS1, nCS2, spi, EN1, EN2, regConfig, invConfig, xtar0, xtar0)</td></tr>
-<tr class="memdesc:ad49a59bb9d2aa8ee2ff54a44c6cfb33c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hard Code.  <a href="namespacemain.html#ad49a59bb9d2aa8ee2ff54a44c6cfb33c">More...</a><br /></td></tr>
-<tr class="separator:ad49a59bb9d2aa8ee2ff54a44c6cfb33c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a816b089321dc03aeae03f2c621de5f47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a816b089321dc03aeae03f2c621de5f47">main.l1</a> = <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>(nCS1, nCS2, spi, EN1, EN2, regConfig, invConfig, xtar1, xtar1)</td></tr>
-<tr class="separator:a816b089321dc03aeae03f2c621de5f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d82c1acd07d6150fcb9aa70f9354cb8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a5d82c1acd07d6150fcb9aa70f9354cb8">main.t1</a> = <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>(nCS1, nCS2, spi, EN1, EN2, regConfig, regConfig, turn1, turn1)</td></tr>
-<tr class="separator:a5d82c1acd07d6150fcb9aa70f9354cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51e0a4a7b1f7f5515ef4efbffc8fbe95"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a51e0a4a7b1f7f5515ef4efbffc8fbe95">main.l2</a> = <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>(nCS1, nCS2, spi, EN1, EN2, regConfig, invConfig, xtar2, xtar2)</td></tr>
-<tr class="separator:a51e0a4a7b1f7f5515ef4efbffc8fbe95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a60c052517b7a6c7dde7345b527b66b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a5a60c052517b7a6c7dde7345b527b66b">main.t2</a> = <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>(nCS1, nCS2, spi, EN1, EN2, regConfig, regConfig, turn2, turn2)</td></tr>
-<tr class="separator:a5a60c052517b7a6c7dde7345b527b66b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50092ee317c2226ab0da7ea27e1e91e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a50092ee317c2226ab0da7ea27e1e91e9">main.l3</a> = <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>(nCS1, nCS2, spi, EN1, EN2, regConfig, invConfig, xtar3, xtar3)</td></tr>
-<tr class="separator:a50092ee317c2226ab0da7ea27e1e91e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a109f8d961fec77a49e3d444ec417155a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a109f8d961fec77a49e3d444ec417155a">main.t3</a> = <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>(nCS1, nCS2, spi, EN1, EN2, regConfig, regConfig, turn3, turn3)</td></tr>
-<tr class="separator:a109f8d961fec77a49e3d444ec417155a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2fa965ee85fcda0845f05e54eba1a73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#ac2fa965ee85fcda0845f05e54eba1a73">main.l4</a> = <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>(nCS1, nCS2, spi, EN1, EN2, regConfig, invConfig, xtar4, xtar4)</td></tr>
-<tr class="separator:ac2fa965ee85fcda0845f05e54eba1a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5daa87cac1d41a4f4c8d4d0dda208bca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a5daa87cac1d41a4f4c8d4d0dda208bca">main.t4</a> = <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>(nCS1, nCS2, spi, EN1, EN2, regConfig, regConfig, turn4, turn4)</td></tr>
-<tr class="separator:a5daa87cac1d41a4f4c8d4d0dda208bca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62c2d838879e3a34bd6939dbad6547f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a62c2d838879e3a34bd6939dbad6547f1">main.t41</a> = <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>(nCS1, nCS2, spi, EN1, EN2, regConfig, regConfig, turn41, turn41)</td></tr>
-<tr class="separator:a62c2d838879e3a34bd6939dbad6547f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a769f0bec49da333f8e84ddf29a3e9a8d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a769f0bec49da333f8e84ddf29a3e9a8d">main.l5</a> = <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>(nCS1, nCS2, spi, EN1, EN2, regConfig, invConfig, xtar5, xtar5)</td></tr>
-<tr class="separator:a769f0bec49da333f8e84ddf29a3e9a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a831220efb38597b598ee46a83c41b206"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a831220efb38597b598ee46a83c41b206">main.l51</a> = <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>(nCS1, nCS2, spi, EN1, EN2, regConfig, invConfig, xtar51, xtar51)</td></tr>
-<tr class="separator:a831220efb38597b598ee46a83c41b206"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6df102e12872b943b6b9de13e284a6d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a6df102e12872b943b6b9de13e284a6d5">main.t5</a> = <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>(nCS1, nCS2, spi, EN1, EN2, regConfig, regConfig, turn5, turn5)</td></tr>
-<tr class="separator:a6df102e12872b943b6b9de13e284a6d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab29c907044122b6dd50ea7b81b599a84"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#ab29c907044122b6dd50ea7b81b599a84">main.t51</a> = <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>(nCS1, nCS2, spi, EN1, EN2, regConfig, regConfig, turn51, turn51)</td></tr>
-<tr class="separator:ab29c907044122b6dd50ea7b81b599a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab76ea850b12ec3f003d75395755987bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#ab76ea850b12ec3f003d75395755987bf">main.l6</a> = <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>(nCS1, nCS2, spi, EN1, EN2, regConfig, invConfig, xtar6, xtar6)</td></tr>
-<tr class="separator:ab76ea850b12ec3f003d75395755987bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa99e599c7e22dcd2d8a9b66c19acd506"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#aa99e599c7e22dcd2d8a9b66c19acd506">main.t6</a> = <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>(nCS1, nCS2, spi, EN1, EN2, regConfig, regConfig, turn6, turn6)</td></tr>
-<tr class="separator:aa99e599c7e22dcd2d8a9b66c19acd506"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62585358b8191619014dd1cd35202c6c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a62585358b8191619014dd1cd35202c6c">main.t61</a> = <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>(nCS1, nCS2, spi, EN1, EN2, regConfig, regConfig, turn61, turn61)</td></tr>
-<tr class="separator:a62585358b8191619014dd1cd35202c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83614e88affc384c48521d78a1b1434f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a83614e88affc384c48521d78a1b1434f">main.l7</a> = <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>(nCS1, nCS2, spi, EN1, EN2, regConfig, invConfig, xtar7, xtar7)</td></tr>
-<tr class="separator:a83614e88affc384c48521d78a1b1434f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb50a16cba8a9b1b79d08d6330ad6ed8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#acb50a16cba8a9b1b79d08d6330ad6ed8">main.l71</a> = <a class="el" href="class_stepper_1_1_t_m_c4210.html">Stepper.TMC4210</a>(nCS1, nCS2, spi, EN1, EN2, regConfig, invConfig, xtar71, xtar71)</td></tr>
-<tr class="separator:acb50a16cba8a9b1b79d08d6330ad6ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59c4341b55f49515506a711f719745cb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a59c4341b55f49515506a711f719745cb">main.stopFlag</a> = <a class="el" href="classtask__share_1_1_share.html">task_share.Share</a> ('h', thread_protect = False, name = &quot;stop&quot;)</td></tr>
+<tr class="memdesc:a59c4341b55f49515506a711f719745cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">various queues to hold cordinate and command data  <a href="namespacemain.html#a59c4341b55f49515506a711f719745cb">More...</a><br /></td></tr>
+<tr class="separator:a59c4341b55f49515506a711f719745cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a464889d41b7bab11162e0513b48fb5e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a464889d41b7bab11162e0513b48fb5e9">main.GateFlag</a> = <a class="el" href="classtask__share_1_1_share.html">task_share.Share</a> ('h', thread_protect = False, name = &quot;gate&quot;)</td></tr>
+<tr class="separator:a464889d41b7bab11162e0513b48fb5e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a9421b933f74493ec79437dfb4fba4d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a6a9421b933f74493ec79437dfb4fba4d">main.x_queue</a></td></tr>
+<tr class="separator:a6a9421b933f74493ec79437dfb4fba4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d5a69721f6f4f956894aecdc025d120"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a1d5a69721f6f4f956894aecdc025d120">main.y_queue</a></td></tr>
+<tr class="separator:a1d5a69721f6f4f956894aecdc025d120"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a417ec4a0fcd9849f0fa82f1e07adc981"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemain.html#a417ec4a0fcd9849f0fa82f1e07adc981">main.command_queue</a></td></tr>
+<tr class="separator:a417ec4a0fcd9849f0fa82f1e07adc981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >This is the main file that sends data to <a class="el" href="_stepper_8py.html">stepper.py</a> and task_motor.py to control the dc and the two stepper motors. </p>
+<p >Here we parse through an HPGL file that we created by drawing a shape in inkscape. The parse function creates three arrays for x and y location as well as pen up/down commands. From there, these arrays are put into a queue that is read in the motor_task function which further interpolates our data to create bytearrays that are to be pushed to our <a class="el" href="_stepper_8py.html">stepper.py</a> file </p><dl class="section author"><dt>Author</dt><dd>Miles Ibarra </dd>
+<dd>
+Matteo Gozzin </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>06/09/2022 </dd></dl>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

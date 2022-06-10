@@ -28,19 +28,18 @@ var NAVTREE =
     [ "Welcome to our ME 405 Term Project!!!", "index.html#sec_links", null ],
     [ "Term Project", "405_t_p_page.html", [
       [ "Files for Term Project", "405_t_p_page.html#section1", null ],
-      [ "Term Project State Diagrams", "405_t_p_page.html#section2", null ],
-      [ "Term Project Task Diagrams", "405_t_p_page.html#section3", null ],
-      [ "Term Project Oscilliscope Images", "405_t_p_page.html#section4", null ],
-      [ "Term Project Cad Models", "405_t_p_page.html#section5", null ],
-      [ "Term Project Plots", "405_t_p_page.html#section6", null ]
+      [ "Hand Calculations", "405_t_p_page.html#section2", null ],
+      [ "Finite State Machine Diagrams", "405_t_p_page.html#section3", null ],
+      [ "ask Diagrams", "405_t_p_page.html#section4", null ],
+      [ "Oscilliscope Images", "405_t_p_page.html#section5", null ],
+      [ "Plots", "405_t_p_page.html#section6", null ],
+      [ "Cad Models", "405_t_p_page.html#section7", null ],
+      [ "Wiring Diagrams", "405_t_p_page.html#section8", null ]
     ] ],
-    [ "Namespaces", "namespaces.html", [
-      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
-      [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ],
-        [ "Variables", "namespacemembers_vars.html", null ]
-      ] ]
+    [ "Namespace Members", "namespacemembers.html", [
+      [ "All", "namespacemembers.html", null ],
+      [ "Functions", "namespacemembers_func.html", null ],
+      [ "Variables", "namespacemembers_vars.html", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -60,8 +59,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"405_t_p__page_8py.html",
-"main_8py.html#a8f8637bd07040722e824fe005c7582e3"
+"405_t_p__page_8py.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
